@@ -1,0 +1,20 @@
+.carousel {
+    background-color: #f7f7f7;
+}
+
+.carousel-item img {
+    width: auto;
+    height: 777px;
+    max-height: 777px;
+    margin: auto; 
+
+    @include tablet {
+        height: 466px;
+        max-height: 466px;
+    }
+
+    @include mobile {
+        height: 374px;
+        max-height: 374px;
+    }
+}

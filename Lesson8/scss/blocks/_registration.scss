@@ -1,0 +1,129 @@
+.registration{
+    &__wrp {
+        display: flex;
+        justify-content: space-between;
+        margin: 64px 0 96px 0;
+
+        @include tablet {
+            margin: 40px 0 96px 0;
+        }
+
+        @include mobile {
+            margin: 40px 0 100px 0;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+    &__title {
+        @include uppercase;
+        font-size: 24px;
+        line-height: 29px;
+        color: #f16d7f;
+        padding: 60px 0 60px 0;
+        background-color:#f8f3f4;
+
+        @include mobile{
+            text-align: center;
+        }
+    }
+
+    &__input {
+        margin: 0 22px 0 0;
+    }
+    
+    &__input-title {
+        @include font(16px, 19px, 300);
+        margin: 0 0 20px 0;
+    }
+    
+    &__radio {
+        margin: 35px 0 35px 0;
+    }
+    
+    &__sub-input {
+        margin: 0 0 20px 0;
+        display: block;
+        height: 45px;
+        width: 450px;
+
+        @include mobile{
+            width: 100%
+        }
+    }
+    
+    &__input-text {
+        @include font(13px, 16px, 300);
+        color: #b1b1b1;
+        margin: 0 0 39px 0;
+    }
+    
+    &__input-button {
+        @include uppercase;
+        color: #ffffff;
+        background-color: #f16d7f;
+        border: none;
+        padding: 17px 66px 17px 30px;
+        position: relative;
+        transition: all 900ms;
+    }
+
+    &__input-button:hover {
+        border-radius: 20px;
+    }
+    
+    &__input-button::after {
+        content: '';
+        position: absolute;
+        background-image: url('../img/whitearrow.svg');
+        width: 17px;
+        height: 10px;
+        top: 22px;
+        right: 27px;
+    }
+    
+    &__information-title {
+        @include uppercase;
+        @include font(24px, 29px, 300);
+        color:#000000;
+        margin: 0 0 22px 0;
+
+        @include tablet{
+            @include font(16px, 19px, 300);
+            margin: 40px 0 32px 0;
+        }
+    }
+    
+    &__information-text {
+        @include font(24px, 29px, 300);
+        color:#000000;
+        margin: 0 0 21px 0;
+
+        @include tablet{
+            @include font(16px, 19px, 300);
+        }
+    }
+    
+    &__information-item { 
+        @include font(24px, 29px, 300);
+        color:#000000;
+        margin: 0 0 16px 0;
+        position: relative;
+        padding: 0 0 0 30px;
+
+        @include tablet{
+            @include font(16px, 19px, 300);
+        }
+    }
+    
+    &__information-item:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-image: url('../img/check_mark.svg');
+        background-size: 15px 15px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+}

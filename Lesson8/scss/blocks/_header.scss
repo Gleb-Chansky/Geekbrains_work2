@@ -1,0 +1,141 @@
+.header {
+    background-color: $black;
+    position: relative;
+
+    &__menu {
+        display: none;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        background-color: #ffffff;
+    }
+
+    &__menu-title {
+        @include font(14px, 17px, 700);
+        @include uppercase;
+        color: black;
+        margin: 37px 0 24px 34px;
+    }
+
+    &__wrp {
+        display: flex;
+        justify-content: space-between;
+        min-height: 75px;
+        align-items: center;
+    }
+
+    &__logo {
+        margin: 0 41px 0 0;
+    }
+
+    &__nav-group {
+        @include flex-center;
+    }
+
+    &__search {
+        background-color: $black;
+        border: none;
+        position: absolute;
+        max-width: 1600px;
+        height: 50px;
+        top: -2px;
+        left: -1px;
+
+        @include tablet {
+            width: 1599px;
+        }
+
+        @include mobile {
+            width: 767px;
+        }
+    }
+
+    &__search:hover {
+        outline: none;
+    }
+
+    &__form {
+        display: none;
+    }
+
+    &__menu-group {
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu-wrp {
+        @include flex-center;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__menu-button:active+.header__menu {
+        display: block;
+    }
+
+    &__button {
+        fill: white;
+        background-color: transparent;
+        border: none;
+    }
+
+    &__button-padding-total {
+        content: '';
+        width: 19px;
+        height: 19px;
+        background-color: #f16d7f;
+        border-radius: 50%;
+        position: absolute;
+        right: 125px;
+        top: 15px;
+    }
+
+    &__button-padding-totalValue {
+        @include font (12px, 14px);
+        display: flex;
+        justify-content: center;
+        color: #ffffff;
+    }
+
+    &__search-button:active+.header__form {
+        content: '';
+        display: block;
+    }
+
+    &__button:hover {
+        fill: #c2bebe;
+    }
+
+    &__button:active {
+        fill: white;
+    }
+
+    &__link {
+        fill: white;
+        margin: 0 0 0 33px;
+    }
+
+    &__link:hover {
+        fill: #c2bebe;
+    }
+
+    &__link:active {
+        fill: white;
+    }
+
+    &__button-padding {
+        padding: 0 0 0 33px;
+
+        @include tablet {
+            padding-left: 20px;
+        }
+
+        @include mobile {
+            padding-left: 20px;
+        }
+    }
+
+
+}

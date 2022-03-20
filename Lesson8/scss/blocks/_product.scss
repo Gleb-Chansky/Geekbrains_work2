@@ -1,0 +1,315 @@
+.product {
+    &__title { 
+        @include font(24px, 29px);
+        @include uppercase;
+        color: #f16d7f;
+        padding: 60px 0 60px 0;
+        background-color:#f8f3f4;
+
+        @include mobile {
+            text-align: center;
+            padding: 24px 0 0 0; 
+        }
+    }
+
+    &__title-wrp {
+        display: flex;
+        justify-content: space-between;
+        
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__sub-title {
+        @include font(14px, 17px, 300);
+        color: #636363;
+
+        @include mobile {
+            margin: 32px 0 46px 0;
+        }
+    }
+
+    &__choise {
+        margin-top: -65px;
+        margin-bottom: 130px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        border: 1px solid #eaeaea;
+
+        @include tablet {
+            margin-top: 0;
+        }
+
+        @include mobile {
+            margin-bottom: 64px;
+        }
+
+    }
+
+    &__choise-inner {
+        max-width: 555px;
+        z-index: 1;
+        background-color: white;
+
+        @include mobile {
+            max-width: 326px
+        }
+    }
+
+    &__choise-sub-title {
+        @include font(14px, 16px, 300);
+        @include uppercase;
+        margin: 65px 0 0 0;
+        color: #f16d7f;
+        text-align: center;
+        position: relative;
+    }
+
+    &__choise-sub-title::after {
+        content:'';
+        width: 63px;
+        height: 3px;
+        background-color: #ef5b70;
+        position: absolute;
+        left: 230px;
+        top: 29px;
+
+        @include mobile {
+            left: 130px;
+        }
+    }
+
+    &__choise-title {
+        @include font(18px, 22px, 300);
+        @include uppercase;
+        color: #4d4d4d;
+        margin: 27px 0 0 0;
+        text-align: center;
+    }
+
+    &__choise-text {
+        @include font(14px, 17px, 300);
+        color:#5e5e5e;
+        margin: 48px 0 0 0;
+        text-align: center;
+
+        @include mobile {
+            @include font (14px, 20px, 300);
+            margin: 32px 0 0 0;
+        }
+    }
+
+    &__choise-price {
+        @include font(24px, 29px, 300);
+        color: #ef5b70;
+        margin: 32px 0 130px 0;
+        text-align: center;
+        position: relative;
+    }
+
+    &__choise-price::after{
+        content:'';
+        width: 641px;
+        height: 1px;
+        background-color: #eaeaea;
+        position: absolute;
+        left: -40px;
+        top: 100px;
+
+        @include mobile {
+            width: 175px;
+            left: 85px;
+        }
+    }
+
+    &__choise-wrp {
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__choise-button {
+        @include font(16px, 20px, 400);
+        width: 211px;
+        height: 47px;
+        margin: 48px 0 45px 0;
+        color: #f26376;
+        border: 1px solid #ff6a6a;
+        background-color: #ffffff;
+        position: relative;
+    }
+
+    &__choise-button::before {
+        content: '';
+        position: absolute;
+        background-image: url('../img/pinkbasket.svg');
+        width: 26px;
+        height: 24px;
+        left: 15px;
+        top: 12px;
+    }
+
+
+
+    &__proposition {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 0 128px 0;
+
+        @include tablet {
+            justify-content:space-evenly;
+            flex-direction: row-reverse;
+        }
+
+        @include mobile {
+            margin: 0 0 64px 0;
+        }
+    }
+
+    &__item {
+        margin: 30px 0 0 0;
+        max-width: 360px;
+        background-color: #f8f8f8;
+        padding: 0 0 20px 0;
+
+        @include tablet{
+            margin: 18px 0 0 0 !important;
+        }
+
+        @include mobile{
+            margin: 16px 0 0 0 !important;
+        }
+    }
+
+    &__item:last-child {
+        @include tablet {
+        display: none;
+        }
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &__item:nth-child(2) {
+        @include mobile {
+            display: none;
+        }
+    }
+    
+    &__item-img {
+        width: 100%;
+    }
+    
+    &__item-overlay {
+        height: 420px;
+        position: relative;
+        background-color: rgba(0, 0, 0, 10);
+    }
+    
+    &__item-overlay:hover .product__item-img {
+        content: '';
+        opacity: 0.4;
+    }
+    
+    &__item-overlay:hover .product__item-wrp {
+        content: '';
+        display: block;
+    }
+    
+    &__item-wrp {
+        color: $white-text;
+        padding: 13px 15px 13px 50px;
+        position: absolute;
+        top: 50%;  
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        border: 1px solid white;
+        display: none;
+    }
+    
+    &__item-button {
+        color: $white-text;
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        height: 100%;
+    }
+    
+    &__item-button::before {
+        content: '';
+        position: absolute;
+        background-image: url('../img/basket.svg');
+        width: 32px;
+        height: 29px;
+        left: 15px;
+        top: 12px;
+    }
+
+    &__item-button:hover {
+        background-color: #c2b6b6;
+    }
+
+    &__item-title {
+        margin:25px 0 12px 0;
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 16px;
+        color: #000000;
+    }
+    
+    &__item-text {
+        margin: 0 0 18px 0;
+        font-weight: 300;
+        color: #5d5d5d;
+    }
+    
+    &__item-link {
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 19px;
+        color: $pink-text;
+    }
+    
+    &__wrp {
+        display: flex;
+        justify-content: center;
+    }
+    
+    &__button {
+        @include font(16px, 19px);
+        text-decoration: none;
+        border: 1px solid ;
+        padding: 14px 35px;
+        color: $pink-text;
+        margin: 48px 0 95px 0;
+        background-color: transparent;
+
+        @include tablet{
+            margin: 33px 0 65px 0;
+        }
+
+        @include mobile{
+            margin: 41px 0 96px 0;
+        }
+    }
+    
+    &__button:hover {
+        background-color: #f16d7f;
+        color: $white-text;
+    }
+}

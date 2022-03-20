@@ -1,0 +1,106 @@
+.sales{
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        white-space: nowrap;
+
+        @include mobile {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+
+    &__item {
+        @include flex-center;
+        width: 360px;
+        height: 260px;
+    }
+    
+    &__item_woman {
+      background-image: url('../img/salewoman.png');
+      margin: 0 0 30px 0;
+
+      @include tablet {
+        width: 33%;
+        background-size: cover;
+        margin: 0 0 20px 0;
+        
+        }
+
+        @include mobile{
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+      
+    }
+    
+    &__item_man {
+        background-image: url('../img/saleman.png');
+        margin:0 0 30px 0;
+
+        @include tablet {
+            width: 33%;
+            background-size: cover;
+            margin: 0 0 20px 0;
+        }
+
+        @include mobile {
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    
+    &__item_kids {
+        background-image: url('../img/salekid.png');
+        margin: 0 0 30px 0;
+
+        @include tablet {
+            width: 33%;
+            background-size: cover;
+            margin: 0 0 20px 0;
+        }
+
+        @include mobile{
+            width: 100%;
+            background-size: cover;
+        }
+    }
+
+    &__item_accesories {
+        background-image: url('../img/saleaccesories.png');
+        width: 100%;
+        height: 180px;
+        background-size: 100% 100%;
+
+        @include tablet {
+            height: 116px;
+        }
+
+        @include mobile {
+            width: 100%;
+            background-size: cover;
+        }
+    }
+    
+    &__item-link {
+        text-decoration: none;
+    }
+    
+    &__item-text {
+        @include uppercase;
+        @include font(16px, 19px);
+        color: $white-text;
+        text-align: center;
+    }
+    
+    &__item-title {
+        @include uppercase;
+        @include font(24px, 29px, 700);
+        color: $pink-text;
+    }
+}

@@ -1,0 +1,28 @@
+.basket {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    width: 400px;
+    height: 100px;
+
+    &__wrp {
+        display: flex;
+        justify-content: space-between;
+        @include font (19px, 24px);
+    }
+
+    &__total {
+        display: flex;
+        justify-content: flex-end;
+        @include font (19px, 24px);
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+}

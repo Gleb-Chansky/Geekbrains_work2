@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+
+<body>
+  <!--
+Обязательное задание.
+
+Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
+Необходимо реализовать функцию:
+mathOperation(arg1, arg2, operation);
+Параметры:
+arg1 - первое число.
+arg2 - второе число.
+operation - строка, которая содержит один символ из: "+", "-", "*", "/".
+Функция mathOperation должна вернуть результат операции, который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2).
+Функция mathOperation должна использовать для вычисления функции из 4 задания.
+
+Примеры вызова функции:
+console.log(mathOperation(5, 3, "+")); // 8
+console.log(mathOperation(5, 3, ":)")); // NaN
+
+Функции mathOperation всегда передаются корректные числа, проверки на NaN,
+Infinity делать не нужно, однако, в случае если был передан некорректный
+аргумент в параметр operation, необходимо вернуть NaN.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+  <script>
+    "use strict";
+
+    /** Функция возвращает результат операции в зависимости от знака который
+     * вводится как operation.
+     * @param {number} arg1 - число под номером 1.
+     * @param {number} arg2 - число под номером 2.
+     * @param {string} operation - вид операции, которую необходимо выпонлнить.
+     * */
+    function mathOperation(arg1, arg2, operation) {
+      switch (operation) {
+        case '+':
+          return sum(arg1, arg2);
+        case '-':
+          return diff(arg1, arg2);
+        case '*':
+          return multi(arg1, arg2);
+        case '/':
+          return div(arg1, arg2);
+        default:
+          return NaN;
+      }
+    }
+
+    console.log(mathOperation(5, 3, "+"));
+    console.log(mathOperation(5, 3, ":)"));
+
+    /** Функция предназначена для вычисления суммы */
+    function sum(num1, num2) {
+      return num1 + num2;
+    }
+
+    /** Функция предназначена для вычеления разности */
+    function diff(num1, num2) {
+      return num1 - num2;
+      if (num1 < num2) {
+        num2 - num1
+      }
+    }
+
+    /** Функция предназначена для вычисления умножения */
+    function multi(num1, num2) {
+      return num1 * num2;
+    }
+
+    /** Функция предназначена для вычисления деления */
+    function div(num1, num2) {
+      return num1 / num2;
+    }
+  </script>
+</body>
+
+</html>
